@@ -25,32 +25,36 @@ const Home = () => {
               <p className="text-xl mb-6 opacity-90">
                 Shop thousands of items with everyday low prices and free shipping on orders $35+
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90">
-                  Shop Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Link to="/quick-delivery">
-                  <Button size="lg" className="bg-sale-red text-sale-red-foreground hover:bg-sale-red/90">
-                    Get In 10 Mins
-                    <TrendingUp className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/district">
-                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                    Walmart District
+              <div className="grid grid-cols-1 gap-4 max-w-2xl">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Button size="lg" className="bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90">
+                    Shop Now
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
-                <Link to="/gamification">
-                  <Button size="lg" className="bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90">
-                    Rewards Hub
-                    <TrendingUp className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Weekly Ad
-                </Button>
+                  <Link to="/quick-delivery">
+                    <Button size="lg" className="bg-sale-red text-sale-red-foreground hover:bg-sale-red/90 w-full">
+                      Get In 10 Mins
+                      <TrendingUp className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Link to="/spot">
+                    <Button 
+                      size="lg" 
+                      className="w-full bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary border-2 border-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-primary group"
+                    >
+                      Walmart Spot
+                      <ArrowRight className="ml-2 h-5 w-5 transform transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </Link>
+                  <Link to="/gamification">
+                    <Button size="lg" className="bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90 w-full">
+                      Rewards Hub
+                      <TrendingUp className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="relative">

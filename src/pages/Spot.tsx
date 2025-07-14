@@ -35,7 +35,7 @@ import {
   type Merchandise
 } from '@/data/districtData';
 
-const District = () => {
+const Spot = () => {
   const { addItem } = useCart();
   const { toast } = useToast();
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -63,7 +63,7 @@ const District = () => {
   };
 
   const MovieCard = ({ movie }: { movie: Movie }) => (
-    <Card className="hover:shadow-lg transition-all duration-300">
+    <Card className="hover:shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-sm border-purple-100">
       <div className="relative">
         <img
           src={movie.image}
@@ -75,15 +75,15 @@ const District = () => {
         </Badge>
       </div>
       <CardContent className="p-4">
-        <h3 className="font-bold text-lg mb-2 line-clamp-1">{movie.title}</h3>
-        <p className="text-sm text-muted-foreground mb-2">{movie.genre}</p>
+        <h3 className="font-bold text-lg mb-2 line-clamp-1 text-purple-900">{movie.title}</h3>
+        <p className="text-sm text-purple-600 mb-2">{movie.genre}</p>
         <div className="flex items-center space-x-2 mb-3">
           <Clock className="h-4 w-4 text-muted-foreground" />
           <span className="text-sm">{movie.duration}</span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="font-bold text-lg">${movie.price}</span>
-          <Button size="sm" className="bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90">
+          <span className="font-bold text-lg text-purple-700">${movie.price}</span>
+          <Button size="sm" className="bg-purple-600 text-white hover:bg-purple-700">
             <Ticket className="h-4 w-4 mr-1" />
             Book Now
           </Button>
@@ -93,7 +93,7 @@ const District = () => {
   );
 
   const EventCard = ({ event }: { event: Event }) => (
-    <Card className="hover:shadow-lg transition-all duration-300">
+    <Card className="hover:shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-sm border-purple-100">
       <div className="relative">
         <img
           src={event.image}
@@ -116,8 +116,8 @@ const District = () => {
         </div>
       </div>
       <CardContent className="p-4">
-        <h3 className="font-bold text-lg mb-2 line-clamp-1">{event.title}</h3>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{event.description}</p>
+        <h3 className="font-bold text-lg mb-2 line-clamp-1 text-purple-900">{event.title}</h3>
+        <p className="text-sm text-purple-600 mb-3 line-clamp-2">{event.description}</p>
         <div className="space-y-2 mb-3">
           <div className="flex items-center space-x-2">
             <Calendar className="h-4 w-4 text-muted-foreground" />
@@ -129,8 +129,8 @@ const District = () => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <span className="font-bold text-lg">${event.price}</span>
-          <Button size="sm" className="bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90">
+          <span className="font-bold text-lg text-purple-700">$</span>
+          <Button size="sm" className="bg-purple-600 text-white hover:bg-purple-700">
             Get Tickets
           </Button>
         </div>
@@ -139,7 +139,7 @@ const District = () => {
   );
 
   const FBComboCard = ({ combo }: { combo: FBCombo }) => (
-    <Card className="hover:shadow-lg transition-all duration-300">
+    <Card className="hover:shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-sm border-purple-100">
       <div className="relative">
         <img
           src={combo.image}
@@ -151,13 +151,13 @@ const District = () => {
         </Badge>
       </div>
       <CardContent className="p-4">
-        <h3 className="font-bold text-lg mb-2">{combo.title}</h3>
-        <p className="text-sm text-muted-foreground mb-3">{combo.description}</p>
+        <h3 className="font-bold text-lg mb-2 text-purple-900">{combo.title}</h3>
+        <p className="text-sm text-purple-600 mb-3">{combo.description}</p>
         <div className="flex items-center space-x-2 mb-3">
           <span className="text-lg font-bold">${combo.discountPrice}</span>
           <span className="text-sm text-muted-foreground line-through">${combo.originalPrice}</span>
         </div>
-        <Button size="sm" className="w-full bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90">
+        <Button size="sm" className="w-full bg-purple-600 text-white hover:bg-purple-700">
           <Gift className="h-4 w-4 mr-1" />
           Claim Deal
         </Button>
@@ -166,7 +166,7 @@ const District = () => {
   );
 
   const PromotionCard = ({ promotion }: { promotion: Promotion }) => (
-    <Card className="hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-primary/5 to-walmart-yellow/5">
+    <Card className="hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-purple-50 to-white backdrop-blur-sm border-purple-100">
       <CardContent className="p-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
@@ -205,7 +205,7 @@ const District = () => {
   );
 
   const MerchandiseCard = ({ item }: { item: Merchandise }) => (
-    <Card className="hover:shadow-lg transition-all duration-300">
+    <Card className="hover:shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-sm border-purple-100">
       <div className="relative">
         <img
           src={item.image}
@@ -214,14 +214,14 @@ const District = () => {
         />
       </div>
       <CardContent className="p-4">
-        <h3 className="font-medium text-sm mb-1 line-clamp-1">{item.name}</h3>
-        <p className="text-xs text-muted-foreground mb-2">{item.category}</p>
+        <h3 className="font-medium text-sm mb-1 line-clamp-1 text-purple-900">{item.name}</h3>
+        <p className="text-xs text-purple-600 mb-2">{item.category}</p>
         <div className="flex items-center justify-between">
-          <span className="font-bold">${item.price}</span>
+          <span className="font-bold text-purple-700">$</span>
           <Button 
             size="sm" 
             onClick={() => handleAddMerchandise(item)}
-            className="bg-walmart-yellow text-walmart-yellow-foreground hover:bg-walmart-yellow/90"
+            className="bg-purple-600 text-white hover:bg-purple-700"
           >
             <ShoppingCart className="h-3 w-3 mr-1" />
             Add
@@ -232,27 +232,24 @@ const District = () => {
   );
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary to-walmart-blue-light text-primary-foreground">
-        <div className="container mx-auto px-4 py-8">
-          <Link to="/" className="inline-flex items-center text-primary-foreground hover:underline mb-4">
-            <ArrowLeft className="h-4 w-4 mr-2" />
+      <div className="bg-gradient-to-r from-purple-700 to-purple-500 text-white shadow-xl">
+        <div className="container mx-auto px-4 py-12">
+          <Link to="/" className="inline-flex items-center text-white hover:text-purple-100 hover:underline mb-6 transition-colors">
+            <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Home
           </Link>
-          <div className="flex items-center space-x-3">
-            <div className="text-4xl">🎪</div>
-            <div>
-              <h1 className="text-3xl font-bold">Walmart District</h1>
-              <p className="text-lg opacity-90">Entertainment meets shopping - discover, experience, shop</p>
-            </div>
-          </div>
+          <h1 className="text-4xl font-bold mb-4">Walmart Spot</h1>
+          <p className="text-xl text-purple-100 max-w-2xl">
+            Your destination for entertainment, events, and exclusive experiences
+          </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-12">
         {/* Filters */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row gap-4 mb-8 bg-white/50 p-6 rounded-lg shadow-md backdrop-blur-sm">
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
             <SelectTrigger className="w-full sm:w-48">
               <SelectValue placeholder="Category" />
@@ -281,7 +278,7 @@ const District = () => {
         </div>
 
         <Tabs defaultValue="events" className="space-y-8">
-          <TabsList className="grid w-full grid-cols-5">
+          <TabsList className="grid w-full grid-cols-5 bg-white/70 backdrop-blur-sm shadow-md">
             <TabsTrigger value="events">🎪 Events</TabsTrigger>
             <TabsTrigger value="movies">🎬 Movies</TabsTrigger>
             <TabsTrigger value="combos">🍔 F&B Combos</TabsTrigger>
@@ -290,7 +287,7 @@ const District = () => {
           </TabsList>
 
           {/* Events Tab */}
-          <TabsContent value="events" className="space-y-8">
+          <TabsContent value="events" className="space-y-8 bg-white/40 p-6 rounded-lg backdrop-blur-sm">
             <div>
               <h2 className="text-2xl font-bold mb-6">Upcoming Events</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -302,7 +299,7 @@ const District = () => {
           </TabsContent>
 
           {/* Movies Tab */}
-          <TabsContent value="movies" className="space-y-8">
+          <TabsContent value="movies" className="space-y-8 bg-white/40 p-6 rounded-lg backdrop-blur-sm">
             <div>
               <h2 className="text-2xl font-bold mb-6">Now Showing</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -314,7 +311,7 @@ const District = () => {
           </TabsContent>
 
           {/* F&B Combos Tab */}
-          <TabsContent value="combos" className="space-y-8">
+          <TabsContent value="combos" className="space-y-8 bg-white/40 p-6 rounded-lg backdrop-blur-sm">
             <div>
               <h2 className="text-2xl font-bold mb-6">Food & Beverage Combos</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -326,7 +323,7 @@ const District = () => {
           </TabsContent>
 
           {/* Deals Tab */}
-          <TabsContent value="deals" className="space-y-8">
+          <TabsContent value="deals" className="space-y-8 bg-white/40 p-6 rounded-lg backdrop-blur-sm">
             <div>
               <h2 className="text-2xl font-bold mb-6">Exclusive Deals & Promotions</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -338,7 +335,7 @@ const District = () => {
           </TabsContent>
 
           {/* Shop Tab */}
-          <TabsContent value="shop" className="space-y-8">
+          <TabsContent value="shop" className="space-y-8 bg-white/40 p-6 rounded-lg backdrop-blur-sm">
             <div>
               <h2 className="text-2xl font-bold mb-6">Shop the Show - Event Merchandise</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
@@ -351,12 +348,10 @@ const District = () => {
         </Tabs>
 
         {/* Featured Section */}
-        <section className="mt-16 bg-gradient-to-r from-walmart-yellow/10 to-primary/10 rounded-lg p-8">
+        <section className="mt-16 bg-gradient-to-r from-purple-600/10 to-purple-900/10 rounded-lg p-8 shadow-xl backdrop-blur-sm">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Experience More with Walmart+</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Get exclusive access to premium events, early bird tickets, and member-only deals
-            </p>
+            <h2 className="text-3xl font-bold mb-4 text-purple-900">Featured Experiences</h2>
+            <p className="text-lg text-purple-700 mb-8">Discover unique entertainment and exclusive deals</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card>
                 <CardContent className="p-6 text-center">
@@ -390,4 +385,4 @@ const District = () => {
   );
 };
 
-export default District;
+export default Spot;

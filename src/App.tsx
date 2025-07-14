@@ -10,9 +10,9 @@ import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Deals from "./pages/Deals";
 import QuickDelivery from "./pages/QuickDelivery";
-import District from "./pages/District";
 import Gamification from "./pages/Gamification";
 import NotFound from "./pages/NotFound";
+import Spot from "./pages/Spot";
 
 const queryClient = new QueryClient();
 
@@ -30,7 +30,7 @@ const App = () => (
               <Route path="/cart" element={<Cart />} />
               <Route path="/deals" element={<Deals />} />
               <Route path="/quick-delivery" element={<QuickDelivery />} />
-              <Route path="/district" element={<District />} />
+              <Route path="/spot" element={<Spot />} />
               <Route path="/gamification" element={<Gamification />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

@@ -98,7 +98,7 @@ const Header = () => {
             <Link to="/category/grocery" className="hover:underline">Grocery</Link>
             <Link to="/category/auto" className="hover:underline">Auto & Tires</Link>
             <Link to="/deals" className="hover:underline text-walmart-yellow">Deals</Link>
-            <Link to="/district" className="hover:underline text-walmart-yellow">District</Link>
+            <Link to="/spot" className="hover:underline text-walmart-yellow">Spot</Link>
             <Link to="/gamification" className="hover:underline text-walmart-yellow">Rewards</Link>
           </div>
         </div>
